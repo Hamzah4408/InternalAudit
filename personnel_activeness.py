@@ -5,7 +5,7 @@ import pandas as pd
 import gradio as gr
 import os
 import tempfile
-from fastapi import FASTAPI
+from fastapi import FastAPI
 from starlette.middleware.wsgi import WSGIMiddleware
 
 def find_email_column(df):
