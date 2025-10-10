@@ -1,19 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[24]:
-
-
 import pandas as pd
 import gradio as gr
 import os
 import tempfile
-import logging
-
-logging.basicConfig(
-    format="%(levelname)s: %(message)s",
-    level=logging.INFO
-)
 
 def find_email_column(df):
     for col in df.columns:
@@ -126,10 +117,3 @@ with gr.Blocks() as demo:
     dropdown.change(download_selected, inputs=[dropdown, file_state], outputs=download_file)
 
 demo.launch(share=True)
-
-
-# In[ ]:
-
-
-
-
