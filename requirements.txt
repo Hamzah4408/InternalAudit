@@ -1,5 +1,3 @@
 gradio
 pandas
 openpyxl
-os
-tempfile
