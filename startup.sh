@@ -1,3 +1,2 @@
 #!/bin/bash
-gunicorn personnel_activeness:app --bind=0.0.0.0:$PORT
-
+exec uvicorn personnel_activeness:app --host 0.0.0.0 --port 8000
