@@ -118,7 +118,5 @@ with gr.Blocks() as demo:
 
     dropdown.change(download_selected, inputs=[dropdown, file_state], outputs=download_file)
 
-demo.launch(share=True)
-
 app = FastAPI()
 app.mount("/", WSGIMiddleware(demo.app))
