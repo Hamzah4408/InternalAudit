@@ -120,7 +120,7 @@ with gr.Blocks() as demo:
     dropdown.change(download_selected, inputs=[dropdown, file_state], outputs=download_file)
 
 app = FastAPI()
-app.mount("/", WSGIMiddleware(demo.app))
+app = gr.mount_gradio_app(app, demo, path="/")
 
 @app.get("/{path_name:path}")
 async def catch_all(path_name: str):
