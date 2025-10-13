@@ -61,7 +61,7 @@ def verify_access_by_sheet(access_file, hr_file):
     return results, pd.concat(combined_df, ignore_index=True) if combined_df else pd.DataFrame()
 
 with gr.Blocks() as demo:
-    gr.Markdown("## 🛡️ Staff Access Verifier")
+    gr.Markdown("## Business Application Access Management")
 
     with gr.Row():
         access_file = gr.File(label="Access log file")
