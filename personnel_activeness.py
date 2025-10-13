@@ -7,6 +7,12 @@ import os
 import tempfile
 from fastapi import FastAPI
 from starlette.middleware.wsgi import WSGIMiddleware
+from fastapi.responses import PlainTextResponse
+
+@app.get("/{path_name:path}")
+async def catch_all(path_name: str):
+    return PlainTextResponse("Not Found", status_code=404)
+
 
 def find_email_column(df):
     for col in df.columns:
